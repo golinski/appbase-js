@@ -95,6 +95,7 @@ function fetchRequest(args) {
           delete transformedRequest.url;
           return fetch(url || finalURL, transformedRequest)
             .then((res) => {
+              console.log(res)
               if (res.status >= 500) {
                 return reject(res);
               }
